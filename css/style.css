@@ -31,11 +31,11 @@ display: block;
 }
 
 .container {
-    outline: 2px solid tomato;
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
+    
 }
 
 .section {
@@ -78,14 +78,15 @@ ul, ol {
 }
 
 /* HEADER */
-
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: solid 2px #ECECEC;
+}
 .container-header {
     display: flex;
     align-items: center;
-    border-bottom: solid 2px #ECECEC;
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
+    }
 
 .navigation {
     display: flex;
@@ -115,13 +116,22 @@ ul, ol {
     color: var(--text-color);
 }
 
-.header-list :hover,
-:focus {
+.header-list :hover {
     color: var(--brand-color);
-    
+}
+
+.header-list :focus {
+    color: var(--brand-color);
 }
 
 /* HERO */
+
+.section-hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background: #2F303A;
+}
+
 .hero-title {
     display: block;
     font-weight: 900;
@@ -137,10 +147,6 @@ ul, ol {
     margin-right: auto;
     }
 
-.hero {
-    background: #2F303A;
-
-    }
 .hero-button {
     font-weight: 700;
     font-size: 16px;
@@ -155,6 +161,7 @@ ul, ol {
     border-color: transparent;
     border-radius: 4px;
     min-width: 216px;
+    min-height: 50px;
     }
 
 /* FEATURES */
@@ -280,10 +287,15 @@ ul, ol {
     margin-bottom: 50px;
 }
 
-.filter-button:hover, :focus {
+.filter-button:hover {
     color: var(--white-brand-color);
     background-color: var(--brand-color);
-    } 
+}
+
+.filter-button:focus {
+    color: var(--white-brand-color);
+    background-color: var(--brand-color);
+    }
 
 .projects-list {
     display: flex;
@@ -319,15 +331,18 @@ ul, ol {
 
 /* FOOTER */
 
-.container-footer {
-    background-color: #2F303A;
+.footer {
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: #2F303A;
 }
 
+.address :hover {
+    color: var(--brand-color);
+}
 
-.address :hover, :focus {
-    color: var(--brand-color)
+.address :focus {
+    color: var(--brand-color);
 }
 
 .address {
@@ -335,6 +350,10 @@ ul, ol {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+}
+
+.address-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 .address-link-map {
